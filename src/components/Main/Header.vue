@@ -35,12 +35,10 @@ export default {
     let jwt;
     cookie.forEach((val) => {
       const jwtToken = val.split('=')
-      console.log(jwtToken)
-      if(jwtToken[0] == 'token') {
+      if(jwtToken[0] == 'token' || jwtToken[0] == ' token') {
         jwt = jwtToken[1]
       }
     })
-    console.log(jwt)
     if (jwt) {
       let res = await fetch('http://109.107.187.195:5000/api/auth/profile', {
         method: 'GET',
