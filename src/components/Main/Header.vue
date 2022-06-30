@@ -45,7 +45,7 @@ export default {
         method: 'GET',
         headers: {
           'Content-type': 'application/json',
-          'Authorization': `Bearer ${jwt[1]}`
+          'Authorization': `Bearer ${jwt}`
         }
       })
       res = await res.json()
