@@ -33,6 +33,7 @@ export default {
     const v = this
     const jwt = document.cookie.split('=')
     if (jwt) {
+      console.log(jwt)
       let res = await fetch('http://109.107.187.195:5000/api/auth/profile', {
         method: 'GET',
         headers: {
