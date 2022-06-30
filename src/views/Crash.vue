@@ -26,7 +26,7 @@ export default {
   },
   created() {
     const v = this
-    this.connection = new WebSocket("ws://109.107.187.195:5001/")
+    this.connection = new WebSocket("wss://109.107.187.195:5001/")
     this.connection.onopen = function () {
       let message = {
         event: 'gameCycle'
