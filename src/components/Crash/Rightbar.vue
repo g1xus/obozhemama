@@ -67,12 +67,19 @@ export default {
   },
   methods: {
     async getBalance() {
-      const jwt = document.cookie.split('=')
+      const cookie = document.cookie.split(';')
+      let jwt;
+      cookie.forEach((val) => {
+        const jwtToken = val.split('=')
+        if(jwtToken[0] == 'token' || jwtToken[0] == ' token') {
+          jwt = jwtToken[1]
+        }
+      })
       let res = await fetch('http://109.107.187.195:5000/api/auth/profile', {
         method: 'GET',
         headers: {
           'Content-type': 'application/json',
-          'Authorization': `Bearer ${jwt[1]}`
+          'Authorization': `Bearer ${jwt}`
         }
       })
       res = await res.json()

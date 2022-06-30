@@ -53,12 +53,19 @@ export default {
                 })
         },
         GET_MYBETS_FROM_API({commit}) {
-            const jwt = document.cookie.split('=')
+            const cookie = document.cookie.split(';')
+            let jwt;
+            cookie.forEach((val) => {
+                const jwtToken = val.split('=')
+                if(jwtToken[0] == 'token' || jwtToken[0] == ' token') {
+                    jwt = jwtToken[1]
+                }
+            })
             return fetch(`http://109.107.187.195:5000/api/auth/getMyBets`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
-                    'Authorization': `Bearer ${jwt[1]}`
+                    'Authorization': `Bearer ${jwt}`
                 }
             })
                 .then((bets) => {

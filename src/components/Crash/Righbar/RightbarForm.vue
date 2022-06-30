@@ -166,14 +166,22 @@ export default {
       const v = this
       v.isAutoBet = false
       v.betButtonPressed = !v.betButtonPressed
+
       if(v.gameFinal === true)
       {
-        const jwt = document.cookie.split('=')
+        const cookie = document.cookie.split(';')
+        let jwt;
+        cookie.forEach((val) => {
+          const jwtToken = val.split('=')
+          if(jwtToken[0] == 'token' || jwtToken[0] == ' token') {
+            jwt = jwtToken[1]
+          }
+        })
         await fetch('http://109.107.187.195:5000/api/auth/delBet', {
           method: 'PUT',
           headers: {
             'Content-type': 'application/json',
-            'Authorization': `Bearer ${jwt[1]}`
+            'Authorization': `Bearer ${jwt}`
           },
           body: JSON.stringify({
             betId: v.res.betId,
@@ -195,12 +203,19 @@ export default {
         v.betButtonPressed = false
       }
       v.betClaimed = true
-      const jwt = document.cookie.split('=')
+      const cookie = document.cookie.split(';')
+      let jwt;
+      cookie.forEach((val) => {
+        const jwtToken = val.split('=')
+        if(jwtToken[0] == 'token' || jwtToken[0] == ' token') {
+          jwt = jwtToken[1]
+        }
+      })
       v.claimRes = await fetch('http://109.107.187.195:5000/api/auth/claimBet', {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json',
-          'Authorization': `Bearer ${jwt[1]}`
+          'Authorization': `Bearer ${jwt}`
         },
         body: JSON.stringify({
           betId: v.res.betId,
@@ -215,7 +230,14 @@ export default {
     },
     async onSubmit() {
       const v = this
-      const jwt = document.cookie.split('=')
+      const cookie = document.cookie.split(';')
+      let jwt;
+      cookie.forEach((val) => {
+        const jwtToken = val.split('=')
+        if(jwtToken[0] == 'token' || jwtToken[0] == ' token') {
+          jwt = jwtToken[1]
+        }
+      })
       v.betButtonPressed = true
       if (v.gameFinal === false || v.gameFinal === 'Crash') {
         Object.defineProperty(v.gameFinalObj, 'gameFinal', {
@@ -230,7 +252,7 @@ export default {
                 method: 'POST',
                 headers: {
                   'Content-type': 'application/json',
-                  'Authorization': `Bearer ${jwt[1]}`
+                  'Authorization': `Bearer ${jwt}`
                 },
                 body: JSON.stringify({
                   bet: v.bet,
@@ -251,7 +273,7 @@ export default {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',
-            'Authorization': `Bearer ${jwt[1]}`
+            'Authorization': `Bearer ${jwt}`
           },
           body: JSON.stringify({
             bet: v.bet,
