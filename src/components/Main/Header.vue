@@ -35,6 +35,7 @@ export default {
     let jwt;
     cookie.forEach((val) => {
       const jwtToken = val.split('=')
+      console.log(jwtToken)
       if(jwtToken[0] == 'token') {
         jwt = jwtToken[1]
       }
