@@ -75,7 +75,7 @@ export default {
           jwt = jwtToken[1]
         }
       })
-      let res = await fetch('http://109.107.187.195:5000/api/auth/profile', {
+      let res = await fetch('https://109.107.187.195:5000/api/auth/profile', {
         method: 'GET',
         headers: {
           'Content-type': 'application/json',

@@ -9,7 +9,7 @@ export default {
     },
     actions: {
         GET_LASTXS_FROM_API({commit}) {
-            return fetch(`http://109.107.187.195:5000/api/auth/lastXs`, {
+            return fetch(`https://109.107.187.195:5000/api/auth/lastXs`, {
                 method: 'GET'
             })
                 .then((rightbarLastXs) =>{

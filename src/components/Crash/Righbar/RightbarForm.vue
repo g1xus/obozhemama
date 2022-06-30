@@ -99,7 +99,7 @@ export default {
     }
   },
   created() {
-    this.connection = new WebSocket("ws://109.107.187.195:5001/")
+    this.connection = new WebSocket("wss://109.107.187.195:5001/")
     const v = this
     this.connection.onopen = function () {
       const message = {
@@ -177,7 +177,7 @@ export default {
             jwt = jwtToken[1]
           }
         })
-        await fetch('http://109.107.187.195:5000/api/auth/delBet', {
+        await fetch('https://109.107.187.195:5000/api/auth/delBet', {
           method: 'PUT',
           headers: {
             'Content-type': 'application/json',
@@ -211,7 +211,7 @@ export default {
           jwt = jwtToken[1]
         }
       })
-      v.claimRes = await fetch('http://109.107.187.195:5000/api/auth/claimBet', {
+      v.claimRes = await fetch('https://109.107.187.195:5000/api/auth/claimBet', {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json',
@@ -248,7 +248,7 @@ export default {
               }
               await v.connection.send(JSON.stringify(message))
               v.betButton = true
-              v.res = await fetch('http://109.107.187.195:5000/api/auth/newBet', {
+              v.res = await fetch('https://109.107.187.195:5000/api/auth/newBet', {
                 method: 'POST',
                 headers: {
                   'Content-type': 'application/json',
@@ -269,7 +269,7 @@ export default {
           }
         })
       } else if(v.gameFinal === true && v.betButton == false && v.betButtonPressed == true){
-        v.res = await fetch('http://109.107.187.195:5000/api/auth/newBet', {
+        v.res = await fetch('https://109.107.187.195:5000/api/auth/newBet', {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',

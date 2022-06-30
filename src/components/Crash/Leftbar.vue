@@ -127,7 +127,7 @@ export default {
   },
   created() {
     const v = this
-    this.connection = new WebSocket("ws://109.107.187.195:5001/")
+    this.connection = new WebSocket("wss://109.107.187.195:5001/")
     this.connection.onmessage = function (event) {
       let message = JSON.parse(event.data)
       if (message.event == 'getNowBets') {
