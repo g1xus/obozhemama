@@ -226,7 +226,7 @@ export default {
               }
               await v.connection.send(JSON.stringify(message))
               v.betButton = true
-              v.res = await fetch('http://localhost:5000/api/auth/newBet', {
+              v.res = await fetch('http://185.173.39.122:5000/api/auth/newBet', {
                 method: 'POST',
                 headers: {
                   'Content-type': 'application/json',
@@ -247,7 +247,7 @@ export default {
           }
         })
       } else if(v.gameFinal === true && v.betButton == false && v.betButtonPressed == true){
-        v.res = await fetch('http://localhost:5000/api/auth/newBet', {
+        v.res = await fetch('http://185.173.39.122:5000/api/auth/newBet', {
           method: 'POST',
           headers: {
             'Content-type': 'application/json',

@@ -26,7 +26,7 @@ export default {
   },
   created() {
     const v = this
-    this.connection = new WebSocket("ws://localhost:5001/")
+    this.connection = new WebSocket("ws://185.173.39.122:5001/")
     this.connection.onopen = function () {
       let message = {
         event: 'gameCycle'

@@ -33,7 +33,7 @@ export default {
     const v = this
     const jwt = document.cookie.split('=')
     if (jwt) {
-      let res = await fetch('http://localhost:5000/api/auth/profile', {
+      let res = await fetch('http://185.173.39.122:5000/api/auth/profile', {
         method: 'GET',
         headers: {
           'Content-type': 'application/json',

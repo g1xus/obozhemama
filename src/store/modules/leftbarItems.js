@@ -23,7 +23,7 @@ export default {
             commit('RESET_BETS_TO_STATE')
         },
         GET_BETS_FROM_API({commit}, gameId) {
-            return fetch(`http://localhost:5000/api/auth/getNowBets?gameId=${gameId}`, {
+            return fetch(`http://185.173.39.122:5000/api/auth/getNowBets?gameId=${gameId}`, {
                 method: 'GET'
             })
                 .then((bets) => {
@@ -38,7 +38,7 @@ export default {
                 })
         },
         GET_PREVBETS_FROM_API({commit}) {
-            return fetch(`http://localhost:5000/api/auth/getPrevBets`, {
+            return fetch(`http://185.173.39.122:5000/api/auth/getPrevBets`, {
                 method: 'GET'
             })
                 .then((bets) => {
@@ -54,7 +54,7 @@ export default {
         },
         GET_MYBETS_FROM_API({commit}) {
             const jwt = document.cookie.split('=')
-            return fetch(`http://localhost:5000/api/auth/getMyBets`, {
+            return fetch(`http://185.173.39.122:5000/api/auth/getMyBets`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json',
@@ -73,7 +73,7 @@ export default {
                 })
         },
         GET_TOPBETS_FROM_API({commit}) {
-            return fetch(`http://localhost:5000/api/auth/getTopBets`, {
+            return fetch(`http://185.173.39.122:5000/api/auth/getTopBets`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
