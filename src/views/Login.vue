@@ -69,7 +69,7 @@ export default {
     async onSubmit() {
       this.v$.$validate()
       if(!this.v$.$error) {
-        const res = await fetch('http://185.173.39.122:5000/api/auth/login', {
+        const res = await fetch('http://109.107.187.195:5000/api/auth/login', {
           method: 'POST',
           headers: {
             'Content-type': 'application/json'
