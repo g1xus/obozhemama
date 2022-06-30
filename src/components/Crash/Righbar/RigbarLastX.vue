@@ -21,11 +21,11 @@ export default {
   },
   watch: {
     rightbarLastX: function (newFinalCoef) {
-      if (Number(newFinalCoef.finalCoef) < 201) {
+      if (Number(newFinalCoef.finalCoef) < 200) {
         this.blue = true
         this.purple = false
         this.gold = false
-      } else if (Number(newFinalCoef.finalCoef) < 1000 && (Number(newFinalCoef.finalCoef) > 200)) {
+      } else if (Number(newFinalCoef.finalCoef) < 1000 && (Number(newFinalCoef.finalCoef) > 199)) {
         this.purple = true
         this.blue = false
         this.gold = false
