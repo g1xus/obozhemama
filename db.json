@@ -1,0 +1,46 @@
+"headerLinks": [
+{"id": "1", "title": "Главная"},
+{"id": "2", "title": "Честная игра"},
+{"id": "3", "title": "FAQ"},
+{"id": "4", "title": "Поддержка"},
+{"id": "5", "title": "Акции"}
+],
+"leftbarItems": [
+{"id": "1", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "1.3x", "profit": "13 000 ₽", "win": "true"},
+{"id": "2", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "-", "profit": "-", "loose": "true"},
+{"id": "3", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "1.3x", "profit": "13 000 ₽", "win": "true"},
+{"id": "4", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "-", "profit": "-", "loose": "true"},
+{"id": "5", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "1.3x", "profit": "13 000 ₽", "win": "true"},
+{"id": "6", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "-", "profit": "-", "loose": "true"},
+{"id": "7", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "1.3x", "profit": "13 000 ₽", "win": "true"},
+{"id": "8", "nickname": "Rich...", "bet": "10 000 ₽", "coef": "-", "profit": "-", "loose": "true"},
+],
+"rightbarLastXs": [
+{"id": "1," "coef": "1.31"},
+{"id": "2," "coef": "1.31"},
+{"id": "3," "coef": "1.31"},
+{"id": "4," "coef": "1.31"},
+{"id": "5," "coef": "1.31"},
+{"id": "6," "coef": "1.31"},
+{"id": "7," "coef": "1.31"},
+{"id": "8," "coef": "1.31"},
+{"id": "9," "coef": "1.31"},
+{"id": "10", "coef": "1.31"},
+{"id": "11", "coef": "1.31"},
+{"id": "12", "coef": "1.31"},
+{"id": "13", "coef": "1.31"},
+{"id": "14", "coef": "1.31"},
+{"id": "15", "coef": "1.31"},
+{"id": "16", "coef": "1.31"},
+{"id": "17", "coef": "1.31"},
+{"id": "18", "coef": "1.31"},
+{"id": "19", "coef": "1.31"},
+{"id": "20", "coef": "1.31"},
+{"id": "21", "coef": "1.31"},
+{"id": "22", "coef": "1.31"},
+{"id": "23", "coef": "1.31"}
+],
+"navGamesItems": [
+{"id": "1", "imgPath": "require('@/assets/img/crash.svg')", "title": "Crash"},
+{"id": "1", "imgPath": "require('@/assets/img/dice.svg')", "title": "Dice"}
+]
