@@ -99,7 +99,7 @@ export default {
     }
   },
   created() {
-    this.connection = new WebSocket("ws://localhost:5001/")
+    this.connection = new WebSocket("ws://185.173.39.122:5001/")
     const v = this
     this.connection.onopen = function () {
       const message = {
@@ -169,7 +169,7 @@ export default {
       if(v.gameFinal === true)
       {
         const jwt = document.cookie.split('=')
-        await fetch('http://localhost:5000/api/auth/delBet', {
+        await fetch('http://185.173.39.122:5000/api/auth/delBet', {
           method: 'PUT',
           headers: {
             'Content-type': 'application/json',
@@ -196,7 +196,7 @@ export default {
       }
       v.betClaimed = true
       const jwt = document.cookie.split('=')
-      v.claimRes = await fetch('http://localhost:5000/api/auth/claimBet', {
+      v.claimRes = await fetch('http://185.173.39.122:5000/api/auth/claimBet', {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json',
